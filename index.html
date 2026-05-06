@@ -9,8 +9,16 @@
 </head>
 <body>
 
-
+<script> 
     <script srcmdcode.js ></script>
+    <script>
+fetch("README.md")
+  .then(res => res.text())
+  .then(md => {
+    document.getElementById("content").innerHTML = marked.parse(md);
+  });
+</script>
+
  
 <div id="content">Loading README...</div>
 
